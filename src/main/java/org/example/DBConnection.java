@@ -1,3 +1,4 @@
+
 package org.example;
 
 import java.sql.Connection;
@@ -12,13 +13,11 @@ public class DBConnection {
     public static Connection getConnection() {
 
         try {
-
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             return DriverManager.getConnection(URL, USER, PASSWORD);
 
         } catch (Exception e) {
-
             throw new RuntimeException(e);
         }
     }
